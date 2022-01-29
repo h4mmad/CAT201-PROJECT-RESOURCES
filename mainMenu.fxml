@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="parentContainer" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hammad.jfx1.HelloController">
+   <children>
+      <TabPane prefHeight="801.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="Add User +">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="885.0" style="-fx-background-color: #1C4EA5;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="527.0" layoutY="109.0" prefHeight="67.0" prefWidth="146.0" text="Add User " textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="32.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="385.0" layoutY="198.0" text="First name:" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Light" size="24.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="714.0" layoutY="518.0" mnemonicParsing="false" onAction="#addUser" prefHeight="14.0" prefWidth="107.0" style="-fx-background-radius: 7px;" text="Add +" textFill="#1c4ea5">
+                           <font>
+                              <Font name="Segoe UI Emoji" size="21.0" />
+                           </font>
+                        </Button>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa62b" height="143.0" layoutX="-11.0" layoutY="655.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1227.0" />
+                        <Label layoutX="623.0" layoutY="198.0" text="Last name:" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Light" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="385.0" layoutY="339.0" text="Email ID:" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Light" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="82.0" fitWidth="79.0" layoutX="561.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@add-friend.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="fname" layoutX="385.0" layoutY="229.0" prefHeight="32.0" prefWidth="198.0" style="-fx-background-radius: 7px; -fx-font-size: 15px;" />
+                        <TextField fx:id="email" layoutX="385.0" layoutY="370.0" prefHeight="32.0" prefWidth="199.0" style="-fx-background-radius: 7px; -fx-font-size: 15px;" />
+                        <TextField fx:id="lname" layoutX="623.0" layoutY="229.0" prefHeight="32.0" prefWidth="198.0" style="-fx-background-radius: 7px; -fx-font-size: 15px;" />
+                        <Label layoutX="385.0" layoutY="427.0" text="License no:" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Light" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="license" layoutX="385.0" layoutY="458.0" prefHeight="32.0" prefWidth="198.0" style="-fx-background-radius: 7px; -fx-font-size: 15px;" />
+                        <ImageView fitHeight="252.0" fitWidth="303.0" layoutX="474.0" layoutY="587.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@car%20next-logos_transparent.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="623.0" layoutY="339.0" text="Phone no:" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Light" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="phone" layoutX="623.0" layoutY="370.0" prefHeight="32.0" prefWidth="198.0" style="-fx-background-radius: 7px; -fx-font-size: 15px;" />
+                        <Line endX="339.0" layoutX="484.0" layoutY="283.0" startX="-100.0" stroke="#14356f">
+                           <rotationAxis>
+                              <Point3D />
+                           </rotationAxis>
+                        </Line>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Add Car +">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="885.0" style="-fx-background-color: #1C4EA5;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="531.0" layoutY="103.0" prefHeight="67.0" prefWidth="146.0" text="Add Car " textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="32.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="385.0" layoutY="177.0" text="Make" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Light" size="24.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="addCarBtn" layoutX="714.0" layoutY="521.0" mnemonicParsing="false" onAction="#addCar" prefHeight="14.0" prefWidth="107.0" style="-fx-background-radius: 7px;" text="Add +" textFill="#1c4ea5">
+                           <font>
+                              <Font name="Segoe UI Emoji" size="21.0" />
+                           </font>
+                        </Button>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa62b" height="143.0" layoutX="-11.0" layoutY="655.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1227.0" />
+                        <Label layoutX="623.0" layoutY="176.0" text="Model:" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Light" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="385.0" layoutY="264.0" text="Year" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Light" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="94.0" fitWidth="96.0" layoutX="553.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@car.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="addCarModel" layoutX="623.0" layoutY="208.0" prefHeight="32.0" prefWidth="198.0" style="-fx-background-radius: 7px; -fx-font-size: 15px;" />
+                        <Label layoutX="385.0" layoutY="392.0" text="Car Plate No:" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Light" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="252.0" fitWidth="303.0" layoutX="474.0" layoutY="587.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@car%20next-logos_transparent.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="addPlateNo" layoutX="385.0" layoutY="434.0" prefHeight="32.0" prefWidth="198.0" style="-fx-background-radius: 7px;" styleClass="fifteenPX" stylesheets="@style.css" />
+                        <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="622.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@plus%20(1).png" />
+                           </image>
+                        </ImageView>
+                        <ChoiceBox fx:id="addCarMake" layoutX="385.0" layoutY="208.0" prefHeight="32.0" prefWidth="200.0" style="-fx-background-radius: 7px; -fx-font-size: 15px;" />
+                        <ChoiceBox fx:id="carYear" layoutX="385.0" layoutY="296.0" prefHeight="32.0" prefWidth="200.0" style="-fx-background-radius: 7px;" styleClass="fifteenPX" stylesheets="@style.css" />
+                        <Label layoutX="623.0" layoutY="392.0" text="Fuel Type:" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Light" size="24.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="petrolRadio" layoutX="627.0" layoutY="435.0" mnemonicParsing="false" selected="true" text="Petrol" textFill="WHITE">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="fuel" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="dieselRadio" layoutX="744.0" layoutY="435.0" mnemonicParsing="false" text="Diesel" textFill="WHITE" toggleGroup="$fuel">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </RadioButton>
+                        <Line endX="339.0" layoutX="486.0" layoutY="383.0" startX="-100.0" stroke="#14356f" />
+                        <Label layoutX="624.0" layoutY="264.0" text="Cost / 24hrs:" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Light" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="addCarCost" layoutX="621.0" layoutY="296.0" prefHeight="32.0" prefWidth="198.0" style="-fx-background-radius: 7px; -fx-font-size: 15px;" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="View Cars">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="885.0" style="-fx-background-color: #1C4EA5;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="478.0" layoutY="33.0" prefHeight="67.0" prefWidth="245.0" text="View cars" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="32.0" />
+                           </font>
+                        </Label>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa62b" height="143.0" layoutX="-11.0" layoutY="655.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1227.0" />
+                        <ImageView fitHeight="252.0" fitWidth="303.0" layoutX="474.0" layoutY="587.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@car%20next-logos_transparent.png" />
+                           </image>
+                        </ImageView>
+                        <TableView fx:id="showTableCars" layoutX="147.0" layoutY="100.0" prefHeight="420.0" prefWidth="911.0" style="-fx-font-size: 15px; -fx-background-radius: 7px;">
+                          <columns>
+                            <TableColumn fx:id="CarMake" prefWidth="144.0" text="Make" />
+                            <TableColumn fx:id="CarModel" prefWidth="151.0" text="Model" />
+                              <TableColumn fx:id="CarYear" prefWidth="153.0" text="Year" />
+                              <TableColumn fx:id="CarPlate" prefWidth="156.0" style="-fx-background-radius: 0;" text="Plate No." />
+                              <TableColumn fx:id="fuelTypeCol" prefWidth="153.0" text="Fuel Type" />
+                              <TableColumn fx:id="cost24Col" prefWidth="153.0" text="Cost / 24hrs" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="refresh" layoutX="951.0" layoutY="568.0" mnemonicParsing="false" onAction="#showCarsAdded" prefHeight="14.0" prefWidth="107.0" style="-fx-background-radius: 7px;" text="Refresh" textFill="#1c4ea5">
+                           <font>
+                              <Font name="Segoe UI Emoji" size="21.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="View Users">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="885.0" style="-fx-background-color: #1C4EA5;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="478.0" layoutY="33.0" prefHeight="67.0" prefWidth="245.0" text="View users" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="32.0" />
+                           </font>
+                        </Label>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa62b" height="143.0" layoutX="-11.0" layoutY="655.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1227.0" />
+                        <ImageView fitHeight="252.0" fitWidth="303.0" layoutX="474.0" layoutY="587.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@car%20next-logos_transparent.png" />
+                           </image>
+                        </ImageView>
+                        <TableView fx:id="usersTable" layoutX="187.0" layoutY="100.0" prefHeight="420.0" prefWidth="826.0" style="-fx-font-size: 15px; -fx-background-radius: 7px;">
+                           <columns>
+                              <TableColumn fx:id="fnameCol" prefWidth="144.0" text="First name" />
+                              <TableColumn fx:id="lnameCol" prefWidth="151.0" text="Last name" />
+                              <TableColumn fx:id="emailCol" prefWidth="216.0" text="Email ID" />
+                              <TableColumn fx:id="phoneCol" prefWidth="148.0" text="Phone No." />
+                              <TableColumn fx:id="licenseCol" prefWidth="166.0" text="License No." />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="usersRefreshBtn" layoutX="906.0" layoutY="568.0" mnemonicParsing="false" onAction="#showUsersAdded" prefHeight="14.0" prefWidth="107.0" style="-fx-background-radius: 7px;" text="Refresh" textFill="#1c4ea5">
+                           <font>
+                              <Font name="Segoe UI Emoji" size="21.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Rent Car">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="885.0" style="-fx-background-color: #1C4EA5;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="531.0" layoutY="103.0" prefHeight="67.0" prefWidth="146.0" text="Rent Car " textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="32.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="385.0" layoutY="210.0" text="License No." textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Light" size="24.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="rentBtn" layoutX="714.0" layoutY="518.0" mnemonicParsing="false" onAction="#addRent" prefHeight="14.0" prefWidth="107.0" style="-fx-background-radius: 7px;" text="Rent " textFill="#1c4ea5">
+                           <font>
+                              <Font name="Segoe UI Emoji" size="21.0" />
+                           </font>
+                        </Button>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa62b" height="143.0" layoutX="-11.0" layoutY="655.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1227.0" />
+                        <Label layoutX="385.0" layoutY="344.0" text="Date of Rent" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Light" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="94.0" fitWidth="96.0" layoutX="553.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@agent.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="622.0" layoutY="206.0" text="Car Plate No." textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Light" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="252.0" fitWidth="303.0" layoutX="474.0" layoutY="587.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@car%20next-logos_transparent.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="622.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@plus%20(1).png" />
+                           </image>
+                        </ImageView>
+                        <DatePicker fx:id="rentDate" layoutX="386.0" layoutY="379.0" prefHeight="35.0" prefWidth="197.0" style="-fx-background-radius: 7px;" styleClass="fifteenPX" stylesheets="@style.css" />
+                        <ChoiceBox fx:id="rentCarPlateDropDown" layoutX="622.0" layoutY="241.0" onMouseClicked="#showRentCarPlates" prefHeight="31.0" prefWidth="197.0" style="-fx-background-radius: 7px;" styleClass="fifteenPX" stylesheets="@style.css" />
+                        <ChoiceBox fx:id="rentUserLicenseDropDown" layoutX="386.0" layoutY="242.0" onMouseClicked="#showRentUserLicense" prefHeight="31.0" prefWidth="197.0" style="-fx-background-radius: 7px;" styleClass="fifteenPX" stylesheets="@style.css" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Check Rented Cars &amp; Bill">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="885.0" style="-fx-background-color: #1C4EA5;">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa62b" height="143.0" layoutX="-11.0" layoutY="655.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1227.0" />
+                        <ImageView fitHeight="252.0" fitWidth="303.0" layoutX="474.0" layoutY="587.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@car%20next-logos_transparent.png" />
+                           </image>
+                        </ImageView>
+                        <SplitPane dividerPositions="0.2345575959933222, 0.2395659432387312" prefHeight="655.0" prefWidth="1200.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" onMouseMoved="#updateValues" prefHeight="653.0" prefWidth="320.0" style="-fx-background-color: #1C4EA5;">
+                                 <children>
+                                    <Label layoutX="17.0" layoutY="92.0" prefHeight="28.0" prefWidth="122.0" text="Car plate no:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Segoe UI" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <ChoiceBox fx:id="dropDownCarPlate" layoutX="17.0" layoutY="120.0" onMouseClicked="#showRentedCarPlates" prefHeight="30.0" prefWidth="150.0" style="-fx-background-radius: 10px;" styleClass="fifteenPX" stylesheets="@style.css" />
+                                    <Label layoutX="17.0" layoutY="166.0" prefHeight="28.0" prefWidth="116.0" text="Days rented:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Segoe UI" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="daysRentedInput" layoutX="18.0" layoutY="194.0" prefHeight="30.0" prefWidth="149.0" style="-fx-background-radius: 10px;" styleClass="fifteenPX" stylesheets="@style.css" />
+                                    <Label fx:id="resultLabel" alignment="CENTER_RIGHT" layoutX="-2.0" layoutY="267.0" prefHeight="49.0" prefWidth="157.0" text="0.00" textFill="WHITE">
+                                       <font>
+                                          <Font name="Segoe UI" size="37.0" />
+                                       </font>
+                                    </Label>
+                                    <Button alignment="CENTER" layoutX="170.0" layoutY="275.0" mnemonicParsing="false" onAction="#calculate" prefHeight="21.0" prefWidth="91.0" style="-fx-background-radius: 7px;" text="Calculate" textFill="#1c4ea5">
+                                       <font>
+                                          <Font name="Segoe UI Emoji" size="17.0" />
+                                       </font>
+                                    </Button>
+                                    <Label layoutX="17.0" layoutY="382.0" prefHeight="28.0" prefWidth="116.0" text="Full Name:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Segoe UI" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="rentedFullName" layoutX="18.0" layoutY="407.0" prefHeight="30.0" prefWidth="239.0" style="-fx-background-radius: 10px;" styleClass="fifteenPX" stylesheets="@style.css" />
+                                    <Label layoutX="18.0" layoutY="461.0" prefHeight="28.0" prefWidth="116.0" text="License No:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Segoe UI" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Button alignment="CENTER" layoutX="99.0" layoutY="605.0" mnemonicParsing="false" onAction="#createInvoice" prefHeight="32.0" prefWidth="162.0" style="-fx-background-radius: 7px;" text="Generate Invoice" textFill="#1c4ea5">
+                                       <font>
+                                          <Font name="Segoe UI Emoji" size="17.0" />
+                                       </font>
+                                    </Button>
+                                    <Label fx:id="resultLabel1" alignment="CENTER_RIGHT" layoutX="19.0" layoutY="267.0" prefHeight="49.0" prefWidth="23.0" text="\$" textFill="WHITE">
+                                       <font>
+                                          <Font name="Segoe UI" size="37.0" />
+                                       </font>
+                                    </Label>
+                                    <ChoiceBox fx:id="rentedLicenseDropDown" layoutX="17.0" layoutY="489.0" onMouseClicked="#showRentedLicenseDropDown" prefHeight="31.0" prefWidth="241.0" style="-fx-background-radius: 10px;" styleClass="fifteenPX" stylesheets="@style.css" />
+                                    <Separator layoutX="-3.0" layoutY="353.0" prefHeight="1.0" prefWidth="288.0" />
+                                    <Label layoutX="17.0" layoutY="10.0" text="Invoice" textFill="WHITE">
+                                       <font>
+                                          <Font name="Segoe UI" size="32.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                              <TableView fx:id="rentTable" onMouseEntered="#showRent" prefHeight="152.0" prefWidth="908.0" style="-fx-font-size: 15px; -fx-background-radius: 7px;">
+                                 <columns>
+                                    <TableColumn fx:id="rentFnameCol" prefWidth="130.0" text="First Name" />
+                                    <TableColumn fx:id="rentLnameCol" prefWidth="130.0" text="Last Name" />
+                                    <TableColumn fx:id="rentLicenseCol" prefWidth="130.0" text="License No." />
+                                    <TableColumn fx:id="rentCarMakeCol" prefWidth="130.0" style="-fx-background-radius: 0;" text="Car Make" />
+                                    <TableColumn fx:id="rentCarModelCol" prefWidth="130.0" text="Car Model" />
+                                    <TableColumn fx:id="rentCarPlateCol" prefWidth="130.0" text="Car Plate No." />
+                                    <TableColumn fx:id="rentDaysRentedCol" prefWidth="130.0" text="Days Rented" />
+                                 </columns>
+                              </TableView>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
